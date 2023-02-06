@@ -12,6 +12,7 @@ function Main(props) {
           <Statement
             key={statement.id}
             code={statement.number}
+            unreadCount={statement.unreadCount}
           />
         )}
       </ul>

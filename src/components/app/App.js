@@ -1,4 +1,4 @@
-import './App.scss';
+import './app.scss';
 import { Main } from '../main/main';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
