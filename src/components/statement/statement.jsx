@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Statement(props) {
   const {
     code,
-    className
+    className = ''
   } = props;
 
   return (
@@ -15,8 +15,8 @@ function Statement(props) {
 }
 
 Statement.propTypes = {
-  id: PropTypes.number,
   code: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export { Statement };
