@@ -10,8 +10,12 @@ function Statement(props) {
     unreadCount
   } = props;
 
+  function onClickHandle() {
+    console.log('click');
+  }
+
   return (
-    <div className={`statement ${className}`}>
+    <div className={`statement ${ className }`} onClick={onClickHandle}>
       <p className='statement__code'>{code}</p> {
         unreadCount !== 0 ? (
           <p className="statement__unread">{unreadCount}</p>
