@@ -18,10 +18,10 @@ function Message(props) {
   } = props;
 
   return (
-      <div className={"message" + (isMy ? ' message--isMy' : '')}>
-        <p className='message__text'>{text}</p>
-        <p className="message__date">{new Date(sendDate).toLocaleDateString("ru-RU", options)}</p>
-      </div>
+    <div className={"message" + (isMy ? ' message--isMy' : '')}>
+      <p className='message__text'>{text}</p>
+      <p className="message__date">{new Date(sendDate).toLocaleDateString("ru-RU", options)}</p>
+    </div>
   )
 }
 
