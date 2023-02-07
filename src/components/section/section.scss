@@ -1,0 +1,24 @@
+@import '../app/App.scss';
+
+.section {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $gray;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+
+  &__name {
+    text-align: left;
+    color: $purple;
+    font-weight: 600;
+  }
+
+  &__unread {
+    width: 25px;
+    min-height: 25px;
+    background-color: $red;
+    border-radius: 50%;
+  }
+}

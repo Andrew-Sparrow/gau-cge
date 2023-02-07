@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Statement } from '../statement/statement';
+import { SectionsContainer } from '../sections-container/sections-container';
+
 
 function StatementСontainer(props) {
   const {
@@ -17,8 +19,7 @@ function StatementСontainer(props) {
           unreadCount={item.statement.unreadCount}
           onClickHandler={onClickHandler}
         />
-        <p>section</p>
-        <p>section</p>
+        <SectionsContainer sectionsId={item.statement.sectionsId} />
       </div>
     )
   } else {

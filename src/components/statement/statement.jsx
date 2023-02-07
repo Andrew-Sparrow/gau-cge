@@ -29,7 +29,6 @@ function Statement(props) {
 Statement.propTypes = {
   id: PropTypes.number,
   code: PropTypes.string,
-  className: PropTypes.string,
   onClickHandle: PropTypes.func,
 };
 
