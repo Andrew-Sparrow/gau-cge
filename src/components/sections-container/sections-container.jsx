@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Section } from '../section/section';
 import { sections } from '../../db/sections';
@@ -8,7 +9,10 @@ function getSectionsById(sectionsId) {
 }
 
 function SectionsContainer(props) {
-  const { sectionsId } = props;
+  const {
+    sectionsId,
+    onClickSectionHandler
+  } = props;
 
   return (
     <div>
@@ -19,10 +23,17 @@ function SectionsContainer(props) {
             id={item.section.id}
             name={item.section.name}
             unreadCount={item.section.unreadCount}
+            onClickSectionHandler={onClickSectionHandler}
           />);
       })}
     </div>
   );
 }
+
+SectionsContainer.propTypes = {
+  sectionsId: PropTypes.array,
+  onClickSectionHandler: PropTypes.func
+};
+
 
 export { SectionsContainer };

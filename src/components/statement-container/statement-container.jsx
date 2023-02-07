@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 import { Statement } from '../statement/statement';
 import { SectionsContainer } from '../sections-container/sections-container';
@@ -7,7 +9,8 @@ import { SectionsContainer } from '../sections-container/sections-container';
 function StatementСontainer(props) {
   const {
     item,
-    onClickHandler
+    onClickStatementHandler,
+    onClickSectionHandler
   } = props;
 
   if (item.isOpen) {
@@ -17,9 +20,12 @@ function StatementСontainer(props) {
           id={item.statement.id}
           code={item.statement.number}
           unreadCount={item.statement.unreadCount}
-          onClickHandler={onClickHandler}
+          onClickStatementHandler={onClickStatementHandler}
         />
-        <SectionsContainer sectionsId={item.statement.sectionsId} />
+        <SectionsContainer
+          sectionsId={item.statement.sectionsId}
+          onClickSectionHandler={onClickSectionHandler}
+        />
       </div>
     )
   } else {
@@ -28,10 +34,16 @@ function StatementСontainer(props) {
         id={item.statement.id}
         code={item.statement.number}
         unreadCount={item.statement.unreadCount}
-        onClickHandler={onClickHandler}
+        onClickStatementHandler={onClickStatementHandler}
       />
     )
   }
-}
+};
+
+StatementСontainer.propTypes = {
+  item: PropTypes.object,
+  onClickStatementHandler: PropTypes.func,
+  onClickSectionHandler: PropTypes.func
+};
 
 export { StatementСontainer };

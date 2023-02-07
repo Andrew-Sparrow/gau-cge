@@ -7,12 +7,12 @@ function Statement(props) {
   const {
     id,
     code,
-    onClickHandler,
+    onClickStatementHandler,
     unreadCount
   } = props;
 
   function handleClickStatement(evt) {
-    onClickHandler(evt.target.id);
+    onClickStatementHandler(evt.target.id);
   }
 
   return (
@@ -29,7 +29,7 @@ function Statement(props) {
 Statement.propTypes = {
   id: PropTypes.number,
   code: PropTypes.string,
-  onClickHandle: PropTypes.func,
+  onClickStatementHandler: PropTypes.func,
 };
 
 export { Statement };

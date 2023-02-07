@@ -8,15 +8,16 @@ function Section(props) {
   const {
     id,
     name,
-    unreadCount
+    unreadCount,
+    onClickSectionHandler
   } = props;
 
-  function handleClickStatement(evt) {
-    console.log(evt.target.id);
+  function handleClickSection(evt) {
+    onClickSectionHandler(+evt.currentTarget.id);
   }
 
   return (
-    <div className='section' onClick={handleClickStatement} id={id}>
+    <div className='section' onClick={handleClickSection} id={id}>
       <p className='section__name'>{name}</p> {
         unreadCount !== 0 ? (
           <p className="section__unread">{unreadCount}</p>

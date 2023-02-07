@@ -14,25 +14,32 @@ function getStatementsWithIsOpenStatus(clickedId = null) {
   return modifiedStatements;
 }
 
-function Main(props) {
-  const [clickedId, setClickedId] = useState(null);
 
-  function onClickHandler(id) {
-    setClickedId(id);
+function Main(props) {
+  const [clickedIdStatement, setClickedIdStatement] = useState(null);
+  const [clickedIdSection, setClickedIdSection] = useState(null);
+
+  function onClickStatementHandler(id) {
+    setClickedIdStatement(id);
+  }
+
+  function onClickSectionHandler(id) {
+    setClickedIdSection(id);
   }
 
   return (
     <main className='main'>
       <ul className='main__list'>
-        {getStatementsWithIsOpenStatus(clickedId).map((item) =>
+        {getStatementsWithIsOpenStatus(clickedIdStatement).map((item) =>
           <StatementСontainer
             item={item}
-            onClickHandler={onClickHandler}
+            onClickStatementHandler={onClickStatementHandler}
+            onClickSectionHandler={onClickSectionHandler}
             key={item.statement.id}
           />
         )}
       </ul>
-      <Chat />
+      <Chat clickedIdSection={clickedIdSection} />
     </main>
   );
 }
