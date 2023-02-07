@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gau-cge/static/css/main.c211220b.css",
+    "main.js": "/gau-cge/static/js/main.49ab7652.js",
+    "index.html": "/gau-cge/index.html",
+    "main.c211220b.css.map": "/gau-cge/static/css/main.c211220b.css.map",
+    "main.49ab7652.js.map": "/gau-cge/static/js/main.49ab7652.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c211220b.css",
+    "static/js/main.49ab7652.js"
+  ]
+}
