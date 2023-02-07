@@ -14,11 +14,11 @@ function Message(props) {
   } = props;
 
   return (
-    <div className='message'>
-      <p className='message__text'>{text}</p>
-      <p className="message__date">{sendDate}</p>
-    </div>
-  );
+      <div className={"message" + (isMy ? ' message--isMy' : '')}>
+        <p className='message__text'>{text}</p>
+        <p className="message__date">{sendDate}</p>
+      </div>
+  )
 }
 
 Message.propTypes = {
