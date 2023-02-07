@@ -4,7 +4,6 @@ import { Section } from '../section/section';
 import { sections } from '../../db/sections';
 
 function getSectionsById(sectionsId) {
-
   return sectionsId.map((id) => sections.find((item) => item.section.id === id));
 }
 
