@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 import './message.scss';
 
+const options = {
+  month: "numeric",
+  day: "numeric",
+  hour: 'numeric',
+  minute: 'numeric',
+};
 
 function Message(props) {
   const {
@@ -16,7 +22,7 @@ function Message(props) {
   return (
       <div className={"message" + (isMy ? ' message--isMy' : '')}>
         <p className='message__text'>{text}</p>
-        <p className="message__date">{sendDate}</p>
+        <p className="message__date">{new Date(sendDate).toLocaleDateString("ru-RU", options)}</p>
       </div>
   )
 }

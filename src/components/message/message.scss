@@ -5,9 +5,12 @@
   color: $purple;
   display: flex;
   margin-bottom: 20px;
+  text-align: start;
+  align-items: end;
 
   &--isMy {
     flex-direction: row-reverse;
+    text-align: end;
   }
 
   &__text {
@@ -28,5 +31,7 @@
   &__date {
     font-size: 11px;
     margin: 0;
+    padding: 5px;
+    padding-bottom: 0;
   }
 }
