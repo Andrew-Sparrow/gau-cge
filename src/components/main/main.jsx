@@ -54,13 +54,6 @@ function Main(props) {
     <main className='main'>
       <ul className='main__list'>
         {getStatementsWithIsOpenStatus(clickedId).map((item) =>
-        // <Statement
-        //   id={item.statement.id}
-        //   key={item.statement.id}
-        //   code={item.statement.number}
-        //   unreadCount={item.statement.unreadCount}
-        //   onClickHandler={onClickHandler}
-        // />
         (getElementsByCondition(item))
         )}
       </ul>
