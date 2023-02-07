@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 
 import { statements } from '../../db/statements';
-import { Statement } from '../statement/statement';
+import { StatementСontainer } from '../statement-container/statement-container';
 import './main.scss';
 
 
 function getStatementsWithIsOpenStatus(clickedId = null) {
-  const modifiedStatements = statements.map((item) => (
-    { ...item, isOpen: item.statement.id === +clickedId ? true : false }
-  ));
+  const modifiedStatements = statements.map((item) => {
+    return ({ ...item, isOpen: item.statement.id === +clickedId ? true : false });
+  });
 
   return modifiedStatements;
 }
-
-
 
 function Main(props) {
   const [clickedId, setClickedId] = useState(null);
@@ -22,39 +20,15 @@ function Main(props) {
     setClickedId(id);
   }
 
-  function getElementsByCondition(item) {
-    if (item.isOpen) {
-      return (
-        <div className='main__sublist'>
-          <Statement
-            id={item.statement.id}
-            key={item.statement.id}
-            code={item.statement.number}
-            unreadCount={item.statement.unreadCount}
-            onClickHandler={onClickHandler}
-          />
-          <p>section</p>
-          <p>section</p>
-        </div>
-      )
-    } else {
-      return (
-        <Statement
-          id={item.statement.id}
-          key={item.statement.id}
-          code={item.statement.number}
-          unreadCount={item.statement.unreadCount}
-          onClickHandler={onClickHandler}
-        />
-      )
-    }
-  }
-
   return (
     <main className='main'>
       <ul className='main__list'>
         {getStatementsWithIsOpenStatus(clickedId).map((item) =>
-        (getElementsByCondition(item))
+          <StatementСontainer
+            item={item}
+            onClickHandler={onClickHandler}
+            key={item.statement.id}
+          />
         )}
       </ul>
     </main>
