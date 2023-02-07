@@ -5,17 +5,19 @@ import './statement.scss';
 
 function Statement(props) {
   const {
+    id,
     code,
     className = '',
+    onClickHandler,
     unreadCount
   } = props;
 
-  function onClickHandle() {
-    console.log('click');
+  function handleClickStatement(evt) {
+    onClickHandler(evt.target.id);
   }
 
   return (
-    <div className={`statement ${ className }`} onClick={onClickHandle}>
+    <div className={`statement ${ className }`} onClick={handleClickStatement} id={id}>
       <p className='statement__code'>{code}</p> {
         unreadCount !== 0 ? (
           <p className="statement__unread">{unreadCount}</p>
@@ -26,8 +28,10 @@ function Statement(props) {
 }
 
 Statement.propTypes = {
+  id: PropTypes.number,
   code: PropTypes.string,
   className: PropTypes.string,
+  onClickHandle: PropTypes.func
 };
 
 export { Statement };
