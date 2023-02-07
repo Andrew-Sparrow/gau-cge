@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './message.scss';
+
 
 function Message(props) {
   const {
@@ -12,8 +14,9 @@ function Message(props) {
   } = props;
 
   return (
-    <div>
-      <p>Здравствуйте</p>
+    <div className='message'>
+      <p className='message__text'>{text}</p>
+      <p className="message__date">{sendDate}</p>
     </div>
   );
 }

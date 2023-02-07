@@ -1,0 +1,21 @@
+@import '../app/App.scss';
+
+.message {
+  color: $purple;
+  display: flex;
+
+  &__text {
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 50px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 1px solid $black;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './chat.scss';
 import { sections } from '../../db/sections';
 import { Message } from '../message/message';
 import { messages } from '../../db/messages';
