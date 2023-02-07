@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { statements } from '../../db/statements';
 import { StatementСontainer } from '../statement-container/statement-container';
+import { Chat } from '../chat/chat';
 import './main.scss';
 
 
@@ -31,6 +32,7 @@ function Main(props) {
           />
         )}
       </ul>
+      <Chat />
     </main>
   );
 }
