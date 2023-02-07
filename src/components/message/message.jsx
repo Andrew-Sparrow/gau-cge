@@ -12,9 +12,7 @@ const options = {
 
 function Message(props) {
   const {
-    id,
     isMy,
-    isUnread,
     text,
     sendDate
   } = props;
