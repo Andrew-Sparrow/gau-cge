@@ -7,7 +7,6 @@ function Statement(props) {
   const {
     id,
     code,
-    className = '',
     onClickHandler,
     unreadCount
   } = props;
@@ -17,7 +16,7 @@ function Statement(props) {
   }
 
   return (
-    <div className={`statement ${ className }`} onClick={handleClickStatement} id={id}>
+    <div className={`statement`} onClick={handleClickStatement} id={id}>
       <p className='statement__code'>{code}</p> {
         unreadCount !== 0 ? (
           <p className="statement__unread">{unreadCount}</p>
@@ -31,7 +30,7 @@ Statement.propTypes = {
   id: PropTypes.number,
   code: PropTypes.string,
   className: PropTypes.string,
-  onClickHandle: PropTypes.func
+  onClickHandle: PropTypes.func,
 };
 
 export { Statement };
