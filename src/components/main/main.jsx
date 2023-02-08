@@ -4,15 +4,7 @@ import { statements } from '../../db/statements';
 import { StatementСontainer } from '../statement-container/statement-container';
 import { Chat } from '../chat/chat';
 import './main.scss';
-
-
-function getStatementsWithIsOpenStatus(clickedId = null) {
-  const modifiedStatements = statements.map((item) => {
-    return ({ ...item, isOpen: item.statement.id === +clickedId ? true : false });
-  });
-
-  return modifiedStatements;
-}
+import { getStatementsWithIsOpenStatus } from './utils';
 
 
 function Main(props) {
@@ -30,7 +22,7 @@ function Main(props) {
   return (
     <main className='main'>
       <ul className='main__list'>
-        {getStatementsWithIsOpenStatus(clickedIdStatement).map((item) =>
+        {getStatementsWithIsOpenStatus(clickedIdStatement, statements).map((item) =>
           <StatementСontainer
             item={item}
             onClickStatementHandler={onClickStatementHandler}
