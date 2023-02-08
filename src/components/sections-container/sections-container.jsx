@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Section } from '../section/section';
 import { sections } from '../../db/sections';
+import { getSectionsById } from './utils';
 
-function getSectionsById(sectionsId) {
-  return sectionsId.map((id) => sections.find((item) => item.section.id === id));
-}
 
 function SectionsContainer(props) {
   const {
@@ -16,7 +14,7 @@ function SectionsContainer(props) {
 
   return (
     <div>
-      {getSectionsById(sectionsId).map((item) => {
+      {getSectionsById(sectionsId, sections).map((item) => {
         return (
           <Section
             key={item.section.id}
