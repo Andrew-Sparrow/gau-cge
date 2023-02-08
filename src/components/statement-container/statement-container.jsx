@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import { Statement } from '../statement/statement';
 import { SectionsContainer } from '../sections-container/sections-container';
 
