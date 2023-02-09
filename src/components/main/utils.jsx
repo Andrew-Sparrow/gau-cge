@@ -17,8 +17,7 @@ function getStatementsWithIsOpenStatus(clickedId = null) {
     }
     return item;
   })
-  console.log(modifiedStatements);
   return modifiedStatements;
 }
 
-export { getStatementsWithIsOpenStatus };
+export { getStatementsWithIsOpenStatus, modifiedStatementsWithIsOpenStatus };

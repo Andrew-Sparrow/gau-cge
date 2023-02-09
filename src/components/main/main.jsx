@@ -1,33 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { StatementСontainer } from '../statement-container/statement-container';
 import { Chat } from '../chat/chat';
 import './main.scss';
-import { getStatementsWithIsOpenStatus } from './utils';
+import {
+  modifiedStatementsWithIsOpenStatus,
+  getStatementsWithIsOpenStatus
+} from './utils';
 
 
 function Main(props) {
-  const [clickedIdStatement, setClickedIdStatement] = useState({id: null});
+  const [statements, setStatements] = useState(modifiedStatementsWithIsOpenStatus())
   const [clickedIdSection, setClickedIdSection] = useState(null);
 
   function onClickStatementHandler(id) {
-    const clickedId = {id}
-    setClickedIdStatement(clickedId);
-
+    setStatements(getStatementsWithIsOpenStatus(id));
   }
 
   function onClickSectionHandler(id) {
     setClickedIdSection(id);
   }
 
-  // useEffect(() => {
-  //   getStatementsWithIsOpenStatus(clickedIdStatement.id);
-  // })
-
   return (
     <main className='main'>
       <ul className='main__list'>
-        {getStatementsWithIsOpenStatus(clickedIdStatement.id).map((item) =>
+        {statements.map((item) =>
           <StatementСontainer
             item={item}
             onClickStatementHandler={onClickStatementHandler}
