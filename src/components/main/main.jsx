@@ -15,7 +15,7 @@ function Main(props) {
 
   function onClickStatementHandler(id) {
     setStatements(setStatementsIsOpenStatus(id));
-    if (statements.find((item) => item.statement.id === +id)) {
+    if (statements.find((item) => item.statement.id === id)) {
       setClickedIdSection(null); // close messages
     }
   }

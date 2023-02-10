@@ -12,7 +12,7 @@ function Statement(props) {
   } = props;
 
   function handleClickStatement(evt) {
-    onClickStatementHandler(evt.target.id);
+    onClickStatementHandler(+evt.target.id);
   }
 
   return (

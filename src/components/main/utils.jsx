@@ -20,4 +20,8 @@ function setStatementsIsOpenStatus(clickedId = null) {
   return modifiedStatements;
 }
 
+function setUread(id) {
+  
+}
+
 export { setStatementsIsOpenStatus, modifiedStatementsWithIsOpenStatus };
