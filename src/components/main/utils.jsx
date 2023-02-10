@@ -8,7 +8,7 @@ function modifiedStatementsWithIsOpenStatus() {
 
 let modifiedStatements = modifiedStatementsWithIsOpenStatus();
 
-function getStatementsWithIsOpenStatus(clickedId = null) {
+function setStatementsIsOpenStatus(clickedId = null) {
   modifiedStatements = modifiedStatements.map((item) => {
     if (item.statement.id === +clickedId) {
       item.isOpen = !item.isOpen;
@@ -20,4 +20,4 @@ function getStatementsWithIsOpenStatus(clickedId = null) {
   return modifiedStatements;
 }
 
-export { getStatementsWithIsOpenStatus, modifiedStatementsWithIsOpenStatus };
+export { setStatementsIsOpenStatus, modifiedStatementsWithIsOpenStatus };

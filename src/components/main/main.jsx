@@ -5,7 +5,7 @@ import { Chat } from '../chat/chat';
 import './main.scss';
 import {
   modifiedStatementsWithIsOpenStatus,
-  getStatementsWithIsOpenStatus
+  setStatementsIsOpenStatus
 } from './utils';
 
 
@@ -14,7 +14,7 @@ function Main(props) {
   const [clickedIdSection, setClickedIdSection] = useState(null);
 
   function onClickStatementHandler(id) {
-    setStatements(getStatementsWithIsOpenStatus(id));
+    setStatements(setStatementsIsOpenStatus(id));
     if (statements.find((item) => item.statement.id === +id)) {
       setClickedIdSection(null); // close messages
     }
