@@ -5,23 +5,25 @@ import { Chat } from '../chat/chat';
 import './main.scss';
 import {
   modifiedStatementsWithIsOpenStatus,
-  setStatementsIsOpenStatus
+  changeStatementsIsOpenStatus,
+  changeUnreadCountStatements,
+  findOpenStatementId
 } from './utils';
 
 
 function Main(props) {
   const [statements, setStatements] = useState(modifiedStatementsWithIsOpenStatus())
-  const [clickedIdSection, setClickedIdSection] = useState(null);
+  const [clickedSectionId, setClickedSectionId] = useState(null);
 
   function onClickStatementHandler(id) {
-    setStatements(setStatementsIsOpenStatus(id));
-    if (statements.find((item) => item.statement.id === id)) {
-      setClickedIdSection(null); // close messages
-    }
+    setStatements(changeStatementsIsOpenStatus(id));
+    setClickedSectionId(null); // close messages
   }
 
-  function onClickSectionHandler(id) {
-    setClickedIdSection(id);
+  function onClickSectionHandler(sectionId) {
+    const openStatementId = findOpenStatementId();
+    setClickedSectionId(sectionId);
+    setStatements(changeUnreadCountStatements(openStatementId, sectionId));
   }
 
   return (
@@ -36,7 +38,7 @@ function Main(props) {
           />
         )}
       </ul>
-      <Chat clickedIdSection={clickedIdSection} />
+      <Chat clickedIdSection={clickedSectionId} />
     </main>
   );
 }

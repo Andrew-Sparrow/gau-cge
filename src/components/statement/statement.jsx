@@ -18,7 +18,7 @@ function Statement(props) {
   return (
     <div className={`statement`} onClick={handleClickStatement} id={id}>
       <p className='statement__code'>{code}</p> {
-        unreadCount !== 0 ? (
+        unreadCount > 0 ? (
           <p className="statement__unread">{unreadCount}</p>
         ) : ''
       }

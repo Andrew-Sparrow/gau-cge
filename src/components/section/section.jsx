@@ -19,7 +19,7 @@ function Section(props) {
   return (
     <div className='section' onClick={handleClickSection} id={id}>
       <p className='section__name'>{name}</p> {
-        unreadCount !== 0 ? (
+        unreadCount > 0 ? (
           <p className="section__unread">{unreadCount}</p>
         ) : ''
       }
