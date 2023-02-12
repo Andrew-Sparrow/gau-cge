@@ -15,7 +15,6 @@ import {
 function Main(props) {
   const [statements, setStatements] = useState(modifiedStatementsWithIsOpenStatus())
   const [clickedSectionId, setClickedSectionId] = useState(null);
-  // const [sections, setSections] = useState(sections);
 
   function onClickStatementHandler(id) {
     setStatements(changeStatementsIsOpenStatus(id));

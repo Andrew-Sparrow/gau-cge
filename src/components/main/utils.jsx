@@ -34,7 +34,6 @@ function changeUnreadCountStatements(statementId, sectionId) {
   modifiedStatements = modifiedStatements.map((item) => {
     if (item.statement.id === statementId && item.statement.unreadCount > 0) {
       item.statement.unreadCount = item.statement.unreadCount - getSectionUnreadCountById(sectionId);
-      console.log(item.statement.unreadCount);
     }
     return item;
   });
