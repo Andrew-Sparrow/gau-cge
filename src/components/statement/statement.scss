@@ -20,5 +20,19 @@
     min-height: 25px;
     background-color: $red;
     border-radius: 50%;
+
+    animation-delay: 1s;
+    animation-name: grow-shrink;
+    animation-duration: 1s;
+
+    @keyframes grow-shrink {
+      40% {
+        transform: scale(1.5);
+      }
+
+      80% {
+        transform: scale(1);
+      }
+    }
   }
 }
