@@ -1,5 +1,7 @@
-function getSectionsById(sectionsId, sections) {
-  return sectionsId.map((id) => sections.find((item) => item.section.id === id));
+import { clonedSections } from "../main/utils.jsx";
+
+function getSectionsById(sectionsId) {
+  return sectionsId.map((id) => clonedSections.find((item) => item.section.id === id));
 }
 
 export { getSectionsById };

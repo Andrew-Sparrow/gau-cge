@@ -1,4 +1,4 @@
-const sections = [
+let sections = [
   {
     section: {
       id: 1,
