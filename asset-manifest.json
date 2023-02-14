@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/gau-cge/static/css/main.06a9edd2.css",
-    "main.js": "/gau-cge/static/js/main.74ec0406.js",
+    "main.css": "/gau-cge/static/css/main.b119fd19.css",
+    "main.js": "/gau-cge/static/js/main.fba05171.js",
     "index.html": "/gau-cge/index.html",
-    "main.06a9edd2.css.map": "/gau-cge/static/css/main.06a9edd2.css.map",
-    "main.74ec0406.js.map": "/gau-cge/static/js/main.74ec0406.js.map"
+    "main.b119fd19.css.map": "/gau-cge/static/css/main.b119fd19.css.map",
+    "main.fba05171.js.map": "/gau-cge/static/js/main.fba05171.js.map"
   },
   "entrypoints": [
-    "static/css/main.06a9edd2.css",
-    "static/js/main.74ec0406.js"
+    "static/css/main.b119fd19.css",
+    "static/js/main.fba05171.js"
   ]
 }
