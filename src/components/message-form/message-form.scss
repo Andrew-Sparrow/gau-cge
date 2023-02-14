@@ -1,0 +1,25 @@
+.message-form {
+
+  &__textarea,
+  &__submit-button {
+    box-sizing: border-box;
+    display: block;
+    width: 320px;
+  }
+
+  &__textarea {
+    resize: vertical;
+    margin-bottom: 20px;
+    min-height: 200px;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  &__submit-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+  }
+}

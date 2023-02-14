@@ -40,7 +40,9 @@ function Main(props) {
           />
         )}
       </ul>
-      <Chat clickedIdSection={clickedSectionId} />
+      {clickedSectionId &&
+        <Chat clickedIdSection={clickedSectionId} />
+      }
     </main>
   );
 }
